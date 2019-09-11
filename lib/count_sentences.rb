@@ -29,9 +29,11 @@ class String
   def count_sentences
     if self.empty?
       return 0
-    else
+    elsif
       self.split('.').count
-      # binding.pry
+    else
+      self.split('?').count
+    binding.pry
 
     end
   end
