@@ -29,11 +29,11 @@ class String
   def count_sentences
     if self.empty?
       return 0
-    elsif
-      self.split('.').count
+    # elsif
+    #   self.split('.').count
     else
-      self.split('?').count
-    binding.pry
+      self.split(/\.|\?|\!/).delete_if {|w| w.size < 2}.count
+     #binding.pry
 
     end
   end
